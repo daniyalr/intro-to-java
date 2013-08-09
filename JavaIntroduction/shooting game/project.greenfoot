@@ -1,0 +1,13 @@
+#Greenfoot properties
+#Fri Aug 09 10:16:34 PDT 2013
+class.shooting.superclass=greenfoot.World
+class.bulet.superclass=greenfoot.Actor
+class.shooter.superclass=greenfoot.Actor
+class.shooter.image=Master-Chief-Action-Figure_529.gif
+project.charset=UTF-8
+version=2.5.0
+class.shooting.image=weave.jpg
+class.zombie.image=balloon3.png
+class.bulet.image=Bullet-Bill.png
+world.lastInstantiated=shooting
+class.zombie.superclass=greenfoot.Actor
