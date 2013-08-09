@@ -14,9 +14,9 @@ public class bulet extends Actor
      */
     public void act() 
     {
-       atWorldEdge();
+       
     }
-    public void atWolrdend()
+    public boolean atWorldEdge()
     {
         if (atWorldEdge()){
             getWorld().removeObject(this);

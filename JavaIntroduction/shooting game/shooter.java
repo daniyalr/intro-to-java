@@ -10,8 +10,11 @@ public class shooter extends Actor
 {
     boolean facingLeft = false;
     boolean facingRight = true;
-    public void shooter()
+    int playerNumber = 0;
+    int delay = 0;
+    public void shooter(int player)
     {   
+         playerNumber =player;
         getImage().scale(30,30);
     }
 
@@ -28,8 +31,27 @@ public class shooter extends Actor
 
     public void checkKeys()
     {
+        String upKey = "up";
+        if (playerNumber == 2) {
+            upKey = "w";
+        }
+        String upKey = "down";
+         if (playerNumber == 2) {
+            upKey = "s";
+        }
+        String upKey = "right";
+         if (playerNumber == 2) {
+            upKey = "d";
+        }
+        String upKey = "left";
+         if (playerNumber == 2) {
+            upKey = "a";
+        }
         if (Greenfoot.isKeyDown("up")){
             setLocation(getX(), getY() -5);
+        }
+        if (Greenfoot.isKeyDown("up")){
+            setLocation(getX(), getY() +5);
         }
         if(Greenfoot.isKeyDown("right"))
         {
@@ -57,9 +79,16 @@ public class shooter extends Actor
 
     public void checkFireKey()
     {
-        if("space".equals(Greenfoot.getKey()))
-        {
-         firebulet();
+       if(dalay > 0){
+        delay = delay -1;
+        }
+        
+        String fireKey = "space";
+        if (playerNumber == 2){
+        fireKey = "q";
+        }
+        if(Greenfoot.isKeyDown(fireKey)){
+            firebulet();
         }
     }
     public void firebulet()
